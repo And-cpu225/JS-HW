@@ -1,19 +1,11 @@
 "use strict";
 
-// alert('Hello');
+const category = 'toys';
 
-// const result = confirm("Are you here?");
-// console.log(result); 
+// console.log('https://someurl.com/' + category + '/' + '4');
 
-// const answer = +prompt("Dfv tcnm 18?", "18");
-// console.log(answer + 5);
+console.log(`https://someurl.com/${category}/5`);
 
-const answers = [];
+const user = "Andrey";
 
-answers[0] = prompt('Как Ваше имя?', '');
-answers[1] = prompt('Как Ваша фамилия?', '');
-answers[2] = prompt('Сколько Вам лет?', '');
-
-document.write(answers);
-
-// console.log(typeof(answers));
+alert(`Привет, ${user}`);
