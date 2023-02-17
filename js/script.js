@@ -1,25 +1,13 @@
 "use strict";
 
-let number = 5;
-const leftBorderWidth = 1;
-
-number = 10;
-console.log(number);
-
 const obj = {
-    a: 50
+    name: "John",
+    age: 25,
+    isMarried: false
 };
 
-obj.a = 10;
+// console.log(obj.name);
+console.log(obj["name"]);
 
-console.log(obj);
-
-
-console.log(name);
-var name = 'Ivan';
-
-{
-    var result = 50;
-}
-
-console.log(result);
+let arr = ['plum.png', 'orange.jpg', 6, 'apple.bmp', {}, []];
+console.log(arr[1]);
