@@ -1,92 +1,52 @@
-"use strict";
+/* Задание на урок:
 
-console.log('arr' + " - object");
-console.log(4 + +"5");
+1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
+'Сколько фильмов вы уже посмотрели?'
 
-// Операторы инкремента
+2) Создать объект personalMovieDB и в него поместить такие свойства:
+    - count - сюда передается ответ на первый вопрос
+    - movies - в это свойство поместить пустой объект
+    - actors - тоже поместить пустой объект
+    - genres - сюда поместить пустой массив
+    - privat - в это свойство поместить boolean(логическое) значение false
 
-let incr = 10,
-    decr = 10;
+3) Задайте пользователю по два раза вопросы:
+    - 'Один из последних просмотренных фильмов?'
+    - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+Записать ответы в объект movies в формате: 
+    movies: {
+        'logan': '8.1'
+    }
 
-incr++;
-// оператор инкремента постфиксный
-decr--;
-// оператор декремента
-
-++incr;
-// оператор инкремента префиксный
---decr;
-
-console.log(incr++);
-console.log(decr--);
-
-console.log(++incr);
-console.log(--decr);
-
-
-console.log(5 % 2);
-// 5 разделили на 2 столько раз, сколько это возможно и в результате получили остаток 1
-
-
-console.log(2 * 4 == 8);
-// Результат: True
-console.log(2 * 4 == '8');
-// Результат: True
-console.log(2 * 4 === '8');
-// Результат: false
-console.log(2 * 4 === 8);
-// Результат: true
-//  == знак сравнения
-//  === знак сравнения (число строго должно равняться числу)
+Проверить, чтобы все работало без ошибок в консоли */
 
 
 
-//  &&    оператор "И" записывается как 2 амперсанта
-//  ||    оператор "ИЛИ" записывается как 2 вертикальные черты
+// ВЫПОЛНЕНИЕ ЗАДАНИЙ!
 
-const isChecked = true,
-    isClose = true;
+'use strict';
 
-console.log(isChecked && isClose);
-// в результате получим    true
+// 1)
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-// const isChecked = true,
-//       isClose = false;
+// 2)
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-// console.log(isChecked && isClose);
-// в результате получим    false
+// 3)
 
-// const isChecked = true,
-//       isClose = false;
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
 
-// console.log(isChecked || isClose);
-// в результате получим    true
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-// const isChecked = false,
-//       isClose = false;
-
-// console.log(isChecked || isClose);
-// в результате получим    false
-
-//  !    оператор отрицания
-
-// const isChecked = false,
-//       isClose = false;
-
-// console.log(isChecked || !isClose);
-// в результате получим    true
-
-
-// ПОРЯДОК ВЫПОЛНЕНИЯ ОПЕРАТОРОВ
-
-console.log(2 + 2 * 2 == 8);
-// Результат: False
-
-console.log(2 + 2 * 2 != 8);
-// Результат: True
-
-console.log(2 + 2 * 2 != '6');
-// Результат: False
-
-console.log(2 + 2 * 2 !== '6');
-// Результат: True
+console.log(personalMovieDB);
